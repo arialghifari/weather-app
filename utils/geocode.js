@@ -5,7 +5,7 @@ const geocode = (address, callback) => {
 
 	request({ url: url, json: true }, (error, response) => {
 		if (error) {
-			callback('Unable to connect to weather services.', undefined);
+			callback('Unable to connect to weather services. Try again.', undefined);
 		} else if (response.body.message || response.body.features.length === 0) {
 			callback('Unable to find location. Try another search.', undefined);
 		} else {

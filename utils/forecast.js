@@ -5,12 +5,12 @@ const forecast = (latitude, longitude, callback) => {
 
 	request({ url: url, json: true}, (error, response) => {
 		if (error) {
-			callback('Unable to connect to forecast service.', undefined);
+			callback('Unable to connect to forecast service. Try again.', undefined);
 		} else if (response.body.error) {
 			callback('Unable to find location. Try another search.', undefined);
 		} else {
 			const current = response.body.current;
-			callback(undefined, current.weather_descriptions + '. It is currently ' + current.temperature + '°C out and it feels like ' + current.feelslike + '°C out. There is ' + current.precip + '% chance of raining.');
+			callback(undefined, 'The weather is ' + current.weather_descriptions + '. It is currently ' + current.temperature + '°C out and wind speed ' + current.wind_speed + ' km/h. There is ' + current.precip*100 + '% chance of raining.');
 		}
 	});
 }

@@ -1,12 +1,23 @@
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
 
-geocode('Bali', (error, data) => {
-	console.log('Error', error);
-	console.log('Data', data);
-});
+const location = process.argv[2]; // get data from cli e.g. 'node app bali'
 
-forecast(-8.607160014855987, 115.15682616804375, (error, data) => {
-	console.log('Error', error);
-	console.log('Data', data);
-});
+if (location) {
+	geocode(location, (error, data) => {
+		if (error) {
+			return console.log(error);
+		}
+	
+		forecast(data.latitude, data.longitude, (error, forecastData) => {
+			if (error) {
+				return console.log(error);
+			}
+	
+			console.log(data.location);
+			console.log(forecastData);
+		});
+	});
+} else {
+	console.log('Please insert location e.g. "node app bali"');
+}
