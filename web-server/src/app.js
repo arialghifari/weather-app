@@ -1,11 +1,20 @@
 const express = require('express');
 const path = require('path');
+const hbs = require('hbs');
 
 const app = express();
-const publicDirectoryPath = path.join(__dirname, '../public');
 
-app.set('view engine', 'hbs'); //using handlebars .hbs template for dynamic content
-app.set('views', path.join(__dirname, '../views'));
+// Define path for express config
+const publicDirectoryPath = path.join(__dirname, '../public');
+const viewsPath = path.join(__dirname, '../templates/views');
+const partialsPath = path.join(__dirname, '../templates/partials');
+
+// setup handlebars engine and views location
+app.set('view engine', 'hbs'); // using handlebars .hbs template for dynamic content
+app.set('views', viewsPath);
+hbs.registerPartials(partialsPath);
+
+// setup static directory to serve
 app.use(express.static(publicDirectoryPath));
 
 app.get('', (req, res) => {
@@ -25,7 +34,8 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
 	res.render('help', {
 		title: 'Help',
-		helpText: 'Example help text'
+		helpText: 'Example help text',
+		name: 'Ari Alghifari'
 	});
 });
 
