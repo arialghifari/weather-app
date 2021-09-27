@@ -39,6 +39,14 @@ app.get('/help', (req, res) => {
 	});
 });
 
+app.get('/help/*', (req, res) => {
+	res.render('404', {
+		title: 'Error',
+		name: 'Ari Alghifari',
+		errorMessage: 'Help article not found.'
+	});
+});
+
 app.get('/weather', (req, res) => {
 	res.send({
 		location: {
@@ -49,6 +57,14 @@ app.get('/weather', (req, res) => {
 			wind: 29,
 			precip: 0.1
 		}
+	});
+});
+
+app.get('*', (req, res) => { // wildards handlers e.g. 404 page
+	res.render('404', {
+		title: 'Error',
+		name: 'Ari Alghifari',
+		errorMessage: 'Page not found.'
 	});
 });
 
