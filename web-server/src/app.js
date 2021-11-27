@@ -62,14 +62,17 @@ app.get('/weather', (req, res) => {
 		}
 
 		forecast(latitude, longitude, (error, forecastData) => {
+			forecastData = forecastData.split('+'); //forecastData[0] = data, forecastData[1] = weather icon
+
 			if (error) {
 				return res.send({ error });
 			}
-	
+
 			res.send({
-				forecast: forecastData,
+				forecast: forecastData[0],
 				location: location,
-				adress: req.query.address
+				adress: req.query.address,
+				icon: forecastData[1]
 			});
 		});
 	});
