@@ -6,31 +6,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/weather-app-logo.png">
-	<title>Weather App - {{title}}</title>
+	<title>Weather App</title>
 </head>
 
 <body>
 
-<h1 class="title">{{title}}</h1>
+<h1 class="title">Weather App</h1>
 
 <div class="link">
-	<a href="/">Weather</a>
+	<a href="/" class="text-bold">Home</a>
 	<a href="/about">About</a>
 	<a href="/help">Help</a>
 </div>
 
 <div class="main-content">
-	<p>Search weather information</p>
-
 	<form action="" method="">
-		<input type="text" placeholder="Location">
-		<button type="submit">Search</button>
+		<input type="text" placeholder="Enter location...">
+		<button type="submit">SE</button>
 	</form>
 
 	<img src="" alt="">
-	<p id="message-1">Bali, Indonesia</p>
-	<p id="message-2">The weather is Partly cloudy. It is currently 25°C</p>
+	<p id="message-1">Loading...</p>
+	<p id="message-2"></p>
 </div>
 
-{{>footer}}
 <script src="/js/app.js"></script>

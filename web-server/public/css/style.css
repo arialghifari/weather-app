@@ -1,37 +1,40 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 body {
-	background-color: #f5f5f5;
-	color: #333;
-	font-family: 'Courier New', Courier, monospace;
-	max-width: 60em;
-	margin: 0 auto;
-	padding: 3em;
-	display: flex;
-	flex-direction: column;
-	min-height: 80vh;
-	font-size: 1.2em;
+	padding: 4rem;
+	text-align: center;
 }
 
 .main-content {
-	flex-grow: 1;
-	margin: 1.6em 0;
+	margin: 0 auto;
+	text-align: center;
 }
 
 h1.title {
-	font-size: 3em;
+	font-size: 6.4rem;
+	color: #368BD6;
 }
 
 .link {
-	margin-top: 0.5em;
+	margin: 2rem 0 11.6rem 0;
 }
 
 .link a {
-	color: #a8a8a8;
-	margin-right: 0.8em;
+	color: #424242;
+	margin-right: 1.6rem;
+	font-size: 2.4rem;
+}
+
+.text-bold {
+	font-weight: bold;
 }
 
 .link a:hover {
@@ -44,28 +47,35 @@ h1.title {
 
 .footer p {
 	color: #a8a8a8;
-	margin: 1.6em 0;
-	font-size: 0.85em;
+	margin: 1.6rem 0;
+	font-size: 0.85rem;
 }
 
 img.potrait {
-	width: 10em;
+	width: 10rem;
 }
 
 form {
-	margin: 1em 0;
+	margin: 1rem 0;
+	display: flex;
+	justify-content: center;
+	column-gap: 0.8rem;
 }
 
 form input,
 form button {
 	border: none;
-	padding: 0.8em;
 	outline: none;
 }
 
 form input {
 	color: #333;
 	border: #f5f5f5 1px solid;
+	background-color: #fafafa;
+	width: 39rem;
+	height: 3.6rem;
+	font-size: 1.8rem;
+	padding: 1.2rem;
 }
 
 form input:focus {
@@ -75,6 +85,8 @@ form input:focus {
 form button {
 	color: white;
 	background-color: #52A8F2;
+	height: 6.2rem;
+	width: 6.2rem;
 }
 
 form button:hover {
@@ -84,8 +96,7 @@ form button:hover {
 
 #message-1,
 #message-2 {
+	font-size: 2.4rem;
 	color: #52A8F2;
-	padding: 0.4em 0;
-	line-height: 1.4em;
 	font-weight: bold;
 }
