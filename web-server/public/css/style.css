@@ -19,7 +19,7 @@ h1.title {
 }
 
 .link {
-	margin: 2rem 0 11.6rem 0;
+	margin-top: 2rem;
 }
 
 .link a {
@@ -44,10 +44,6 @@ h1.title {
 	color: #a8a8a8;
 	margin: 1.6rem 0;
 	font-size: 0.85rem;
-}
-
-img.potrait {
-	width: 10rem;
 }
 
 form {
@@ -88,12 +84,12 @@ form button:hover {
 }
 
 .message {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	color: white;
-	background-color: #52A8F2;
+	background-color: #368BD6;
 	width: 80rem;
 	height: 24rem;
 	margin-top: 4rem;
@@ -102,7 +98,14 @@ form button:hover {
 .message img {
 	width: 3.6rem;
 	border-radius: 50%;
-	justify-self: flex-end;
+}
+
+.message span {
+	display: flex;
+	margin-top: 4rem;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
 }
 
 #message-1,
@@ -112,13 +115,14 @@ form button:hover {
 }
 
 #message-1 {
-	margin-top: 2.2rem;
+	margin-top: 2rem;
+	width: 80%;
 }
 
 #message-2 {
 	font-size: 1.8rem;
-	justify-self: flex-start;
-	margin-top: 0.8rem;
+	width: 75%;
+	text-align: left;
 }
 
 .main-content {
@@ -126,6 +130,8 @@ form button:hover {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	font-size: 2rem;
+	margin-top: 11.6rem;
 }
 
 .main-content form button {
@@ -136,4 +142,24 @@ form button:hover {
 
 .main-content form button img {
 	width: 32px;
+}
+
+.main-content-others {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	margin-top: 4.8rem;
+	line-height: 2.8rem;
+}
+
+.main-content-others h2 {
+	line-height: 2.8rem;
+	margin-bottom: 0.8rem;
+}
+
+img.potrait {
+	width: 16rem;
+	margin-bottom: 0.8rem;
 }
