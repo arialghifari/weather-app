@@ -4,13 +4,13 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-	"start": "node web-server/src/app.js"
+    "start": "node web-server/src/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-	"express":"4.17.2",
+    "express": "*",
     "postman-request": "^2.88.1-postman.30"
   }
 }
